@@ -1,7 +1,20 @@
-### Always Show Timestamps (`kino.caretas.club`)
-<details>
+### Poster Ambience (`letterboxd.com`)
+📙 Ambient background color for film posters.
 
+<details>
+✨Smooth transition. 
+
+ℹ Color extraction process may produce very dark colors on some posters.
+| <!-- -->    | <!-- -->    |
+--- | ---
+![firefox_A4PkSq330x](https://github.com/seaque/tampermonkey-scripts/assets/45668726/37a9f31a-5d2b-4378-8a1e-fbd169e951e5) | ![firefox_O5hmKCnzVd](https://github.com/seaque/tampermonkey-scripts/assets/45668726/70df2ce6-846d-4a6e-9e56-66859ebf77c3)
+
+</details>
+
+### Always Show Timestamps (`kino.caretas.club`)
 📙 Display timestamps left of subtitles.
+
+<details>
 
 ✨ Clicking copies the request as a timestamp.
 
@@ -12,9 +25,9 @@
 </details>
 
 ### Filter Used Requests (`kino.caretas.club`)
-<details>
-
 📙 Filters used or removed requests.
+
+<details>
 
 ✨ Has a toggle.
 
@@ -23,20 +36,21 @@
 </details>
 
 ### Twitch Chat Anti-Ban (`twitch.tv`)
-<details>
 
 📙 See chat on accounts you have been banned.
 
+<details>
 🍴 Ported from tmarenko's [extension](https://github.com/tmarenko/twitch_chat_antiban).
-    
- 
 </details>
 
 ### Episode Comment Picture Width (`tvtime.com`)
-<details>
 
 📙 Make episode comment pictures smaller for easy navigation.
-
-
     
-</details>
+
+
+### Youtube 2 Piped (`youtube.com`)
+
+📙 Redirect YouTube to piped.kavin.rocks
+    
+
