@@ -4,6 +4,7 @@
 // @description  Smaller comment pictures, bigger reaction icons.
 // @author       seaque
 // @license      MIT
+// @namespace    https://github.com/seaque/tampermonkey-scripts
 // @match        *://*.tvtime.com/*/show/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=tvtime.com
 // @grant        GM_addStyle
