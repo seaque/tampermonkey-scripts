@@ -5,6 +5,7 @@
 // @author       seaque
 // @license      MIT
 // @namespace    https://github.com/seaque/tampermonkey-scripts
+// @downloadURL  https://github.com/seaque/tampermonkey-scripts/raw/main/youtube-to-piped.js
 // @match        *://*.youtube.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=youtube.com
 // @grant        none

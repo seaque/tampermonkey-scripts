@@ -1,11 +1,11 @@
 // ==UserScript==
 // @name         Letterboxd Poster Ambience
-// @namespace    https://github.com/seaque/tampermonkey-scripts
-// @updateURL    https://github.com/seaque/tampermonkey-scripts/raw/main/letterboxd-poster-ambience.js
 // @version      1.1
 // @description  Ambient background color for film posters.
 // @author       seaque
 // @license       MIT
+// @namespace    https://github.com/seaque/tampermonkey-scripts
+// @downloadURL  https://github.com/seaque/tampermonkey-scripts/raw/main/letterboxd-poster-ambience.js
 // @match        *://*.letterboxd.com/film/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=letterboxd.com
 // @require      https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js

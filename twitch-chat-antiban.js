@@ -5,6 +5,7 @@
 // @author       seaque
 // @license      Apache 2.0
 // @namespace    https://github.com/seaque/tampermonkey-scripts
+// @downloadURL  https://github.com/seaque/tampermonkey-scripts/raw/main/twitch-chat-antiban.js
 // @match        *://*.twitch.tv/*
 // @icon         data:image/svg+xml, <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 2400 2800" style="enable-background:new 0 0 2400 2800" xml:space="preserve"><style>.st1{fill:blueviolet}</style><path style="fill:white" d="m2200 1300-400 400h-400l-350 350v-350H600V200h1600z"/><g id="Layer_1-2"><path class="st1" d="M500 0 0 500v1800h600v500l500-500h400l900-900V0H500zm1700 1300-400 400h-400l-350 350v-350H600V200h1600v1100z"/><path class="st1" d="M1700 550h200v600h-200zm-550 0h200v600h-200z"/></g></svg>
 // @grant        none
