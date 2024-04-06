@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Letterboxd Poster Ambience
 // @namespace    https://github.com/seaque/tampermonkey-scripts
-// @version      1.2.1
+// @version      1.2.2
 // @description  Ambient background color for film posters.
 // @author       seaque
 // @license       MIT
@@ -19,7 +19,8 @@
     
     let imageElement;
     let isMobile = window.navigator.userAgent.toLowerCase().includes("mobi");
-    
+    const logPrefix = '%cLETTERBOXD POSTER AMBIENCE:';
+
     const createAmbientDiv = (img, w, h) => {
         const ambient_div = document.createElement('div');
         ambient_div.setAttribute('id', 'ambientDiv');
@@ -55,10 +56,10 @@
 
     const getPosterImage = () => {
 
-        imageElement = $('div.film-poster > div > img')
-        const url = imageElement[0].getAttribute('srcset');
-
         const posterImage = new Image();
+
+        imageElement = $('a > div.film-poster > div > img')
+        const url = imageElement[0].getAttribute('srcset');
         posterImage.crossOrigin = "Anonymous";
         posterImage.src = url;
 
@@ -72,7 +73,7 @@
             const width = img.naturalWidth;
             const height = img.naturalHeight;
             if (isMobile){
-                imageElement.parent().parent().parent().parent().prepend(createAmbientDiv(img, width / 5, height / 5));
+                imageElement.parent().parent().parent().parent().prepend(createAmbientDiv(img, width / 3, height / 3));
             }
             else {
                 imageElement.parent().parent().parent().parent().prepend(createAmbientDiv(img, width, height));
@@ -80,11 +81,23 @@
         });
     };
 
-    setInterval(function() {
+    let funcInterval = setInterval(() => {
         if ( $('#ambientDiv img').length ){
+            console.info(logPrefix, logStyle, 'Poster Ambience Applied.');
             return;
         }
         addAmbientDiv();
-    }, 2500);
+    }, 2000);
 
+    const logStyle = [
+        'color: white',
+        'background: #445566',
+        'border: 1px solid #2c3440',
+        'border-radius: 4px',
+    ].join(';');
+
+    setTimeout(() => {
+        clearInterval(funcInterval);
+        console.info(logPrefix, logStyle, 'Time Out. Exiting...');
+    }, 8000);
 })();
