@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Letterboxd Poster Ambience
 // @namespace    https://github.com/seaque/tampermonkey-scripts
-// @version      1.2.2
+// @version      1.3
 // @description  Ambient background color for film posters.
 // @author       seaque
 // @license       MIT
@@ -13,13 +13,13 @@
 // @run-at       document-start
 // ==/UserScript==
 /* globals jQuery, $, waitForKeyElements */
- 
+
 (function() {
     'use strict';
     
     let imageElement;
     let isMobile = window.navigator.userAgent.toLowerCase().includes("mobi");
-    const logPrefix = '%cLETTERBOXD POSTER AMBIENCE:';
+    const logPrefix = '%cLETTERBOXD POSTER AMBIENCE';
 
     const createAmbientDiv = (img, w, h) => {
         const ambient_div = document.createElement('div');
@@ -55,19 +55,33 @@
     };
 
     const getPosterImage = () => {
+        try {
+            const posterImage = new Image();
 
-        const posterImage = new Image();
+            imageElement = $('a > div.film-poster > div > img');
+            if (!imageElement || imageElement.length === 0) {
+                throw new Error('Poster image element not found.');
+            }
 
-        imageElement = $('a > div.film-poster > div > img')
-        const url = imageElement[0].getAttribute('srcset');
-        posterImage.crossOrigin = "Anonymous";
-        posterImage.src = url;
+            const url = imageElement[0].getAttribute('srcset');
+            if (!url) {
+                throw new Error('Poster image URL not found.');
+            }
 
-        return posterImage;
+            console.info(logPrefix, logStyle, `Successfully fetched poster: "${url}"`);
+            posterImage.crossOrigin = "Anonymous";
+            posterImage.src = url;
+
+            return posterImage;
+        } catch (error) {
+            console.error(logPrefix, logStyle, `Error fetching poster image: ${error.message}`);
+            return null;
+        }
     };
 
     const addAmbientDiv = () => {
         const img = getPosterImage();
+        if (!img) return;
 
         img.addEventListener("load", () => {
             const width = img.naturalWidth;
@@ -84,6 +98,8 @@
     let funcInterval = setInterval(() => {
         if ( $('#ambientDiv img').length ){
             console.info(logPrefix, logStyle, 'Poster Ambience Applied.');
+            clearInterval(funcInterval);
+            funcInterval = null;
             return;
         }
         addAmbientDiv();
@@ -97,7 +113,8 @@
     ].join(';');
 
     setTimeout(() => {
-        clearInterval(funcInterval);
-        console.info(logPrefix, logStyle, 'Time Out. Exiting...');
+        if (funcInterval) {
+            console.info(logPrefix, logStyle, 'Time Out. Exiting...');
+        }
     }, 8000);
 })();
