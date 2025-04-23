@@ -26,6 +26,7 @@
 ### Twitch Chat Anti-Ban (`twitch.tv`)
 
 📙 See chat on accounts you have been banned.
+
 🍴 Ported from tmarenko's [extension](https://github.com/tmarenko/twitch_chat_antiban).
 
 ### Episode Comment Picture Width (`tvtime.com`)
