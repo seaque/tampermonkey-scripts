@@ -3,8 +3,8 @@
 
 ℹ May produce very dark (almost invisible) background due to source poster colors.
 <div>
-<img style="width: 50%; float:left;" src="https://github.com/seaque/userscripts/assets/45668726/37a9f31a-5d2b-4378-8a1e-fbd169e951e5">
-<img style="width: 50%" src="https://github.com/seaque/userscripts/assets/45668726/70df2ce6-846d-4a6e-9e56-66859ebf77c3">
+<img style="width: 41%; float:left;" src="https://github.com/seaque/userscripts/assets/45668726/37a9f31a-5d2b-4378-8a1e-fbd169e951e5">
+<img style="width: 40%;" src="https://github.com/seaque/userscripts/assets/45668726/70df2ce6-846d-4a6e-9e56-66859ebf77c3">
 </div>
 
 ### Always Show Timestamps (`kino.caretas.club`)
