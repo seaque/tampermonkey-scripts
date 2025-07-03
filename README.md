@@ -2,9 +2,10 @@
 📙 Ambient background color for film posters.
 
 ℹ May produce very dark (almost invisible) background due to source poster colors.
-| <!-- -->    | <!-- -->    |
---- | ---
-![firefox_A4PkSq330x](https://github.com/seaque/tampermonkey-scripts/assets/45668726/37a9f31a-5d2b-4378-8a1e-fbd169e951e5) | ![firefox_O5hmKCnzVd](https://github.com/seaque/tampermonkey-scripts/assets/45668726/70df2ce6-846d-4a6e-9e56-66859ebf77c3)
+<div>
+<img style="width: 50%; float:left;" src="https://github.com/seaque/userscripts/assets/45668726/37a9f31a-5d2b-4378-8a1e-fbd169e951e5">
+<img style="width: 50%" src="https://github.com/seaque/userscripts/assets/45668726/70df2ce6-846d-4a6e-9e56-66859ebf77c3">
+</div>
 
 ### Always Show Timestamps (`kino.caretas.club`)
 📙 Display timestamps left of subtitles.
@@ -43,6 +44,6 @@
 
 ⚠️ Button will open the old image unless previous and next buttons are used (or page refreshed).
 
-![firefox_GNUWeCyoN0](https://github.com/seaque/tampermonkey-scripts/assets/45668726/826b8878-21a8-4987-b89e-475a6097053c)
+![firefox_GNUWeCyoN0](https://github.com/seaque/userscripts/assets/45668726/826b8878-21a8-4987-b89e-475a6097053c)
 
 
